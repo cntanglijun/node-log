@@ -1,33 +1,31 @@
 import 'babel-polyfill';
-import util from 'util';
-
-const { white, cyan, yellow, green, red } = util.inspect.colors;
-
-[ white, cyan, yellow, green, red ].forEach( color => {
-  color[ 0 ] = '\u001b[' + color[ 0 ] + 'm';
-  color[ 1 ] = '\u001b[' + color[ 1 ] + 'm';
-} );
+import colors from './colors';
 
 class Log {
   normal( str, ...args ) {
-    this::console.log( white[ 0 ] + str + white[ 1 ], ...args );
+    this::console.log( colors.white( str ), ...args );
   }
 
   info( str, ...args ) {
-    this::console.log( cyan[ 0 ] + str + cyan[ 1 ], ...args );
+    this::console.log( colors.cyan( str ), ...args );
   }
 
   warn( str, ...args ) {
-    this::console.log( yellow[ 0 ] + str + yellow[ 0 ], ...args );
+    this::console.log( colors.yellow( str ), ...args );
   }
 
   success( str, ...args ) {
-    this::console.log( green[ 0 ] + str + green[ 1 ], ...args );
+    this::console.log( colors.green( str ), ...args );
   }
 
   error( str, ...args ) {
-    this::console.log( red[ 0 ] + str + red[ 1 ], ...args );
+    this::console.log( colors.red( str ), ...args );
+  }
+
+  custom( str, ...args ) {
+    this.normal( str, ...args );
   }
 }
 
 export default new Log();
+export { colors };
