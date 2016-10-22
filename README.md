@@ -1,4 +1,4 @@
-# node-log
+# node-log.js
 
 [![node](https://img.shields.io/node/v/node-log.js.svg)](https://github.com/cntanglijun/node-log)
 [![npm](https://img.shields.io/npm/v/node-log.js.svg)](https://www.npmjs.com/package/node-log.js)
@@ -7,11 +7,9 @@
 [![GitHub release](https://img.shields.io/github/release/cntanglijun/node-log.svg)](https://github.com/cntanglijun/node-log.js/releases)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/cntanglijun/node-log.js/master/LICENSE.md)
 
-Let console.log in nodejs with colors
+Get colors in your node.js console
 
-## Screenshot
-
-[![screenshot](./asset/screenshot.png)](https://github.com/cntanglijun/node-log.js)
+[![screenshot](./screenshot.png)](https://github.com/cntanglijun/node-log.js)
 
 ## Installation
 
@@ -22,7 +20,7 @@ npm i node-log --save
 ## Usage
 
 ```js
-const log = require('node-log');
+const log = require('node-log.js');
 
 const testStr = 'hello world!'
 

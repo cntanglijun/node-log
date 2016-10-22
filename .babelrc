@@ -1,9 +1,6 @@
 {
   "presets": [
-    "latest"
-  ],
-  "plugins": [
-    "transform-function-bind",
-    "transform-class-properties"
+    "latest",
+    "stage-0"
   ]
 }
